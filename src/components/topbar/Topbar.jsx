@@ -8,14 +8,14 @@ export default function Toper({ menuOpen, setMenuOpen }) {
       <div className="wrapper ">
 
         <div className="left">
-          <a href="#intro" className='logo'>genius.</a>
+          <a href="#intro" className='logo'>@Bkkk</a>
           <div className="itemContainer">
             <Person className="icon" />
             <span>+44 56541 65161</span>
           </div>
           <div className="itemContainer">
             <Mail className="icon" />
-            <span>jakismail@gmial.com</span>
+            <span>bernardkrasowski111@gmail.com</span>
           </div>
         </div>
 
