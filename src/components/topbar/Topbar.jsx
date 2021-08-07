@@ -1,14 +1,15 @@
-import React from 'react'
-import './topbar.scss'
-import { Person, Mail } from "@material-ui/icons"
+import React from "react";
+import "./topbar.scss";
+import { Person, Mail } from "@material-ui/icons";
 
 export default function Toper({ menuOpen, setMenuOpen }) {
   return (
-    <div className={`topbar ${menuOpen && 'active'}`}>
+    <div className={`topbar ${menuOpen && "active"}`}>
       <div className="wrapper ">
-
         <div className="left">
-          <a href="#intro" className='logo'>@Bkkk</a>
+          <a href="#intro" className="logo">
+            Br@Kr
+          </a>
           <div className="itemContainer">
             <Person className="icon" />
             <span>+44 56541 65161</span>
@@ -19,17 +20,14 @@ export default function Toper({ menuOpen, setMenuOpen }) {
           </div>
         </div>
 
-
         <div className="right">
           <div className="hamburger" onClick={() => setMenuOpen(!menuOpen)}>
             <span className="line1"></span>
             <span className="line2"></span>
             <span className="line3"></span>
           </div>
-
-
         </div>
       </div>
     </div>
-  )
+  );
 }

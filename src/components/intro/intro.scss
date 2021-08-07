@@ -1,6 +1,4 @@
-
-
-.intro{
+.intro {
   background-image: url("../../images/intro.jpg");
   background-repeat: no-repeat;
   background-position: center;
@@ -9,37 +7,38 @@
   filter: hue-rotate(40deg);
   transition: 1s ease;
 
-  &.active{
-    filter: hue-rotate(80deg) blur(10px) ;
+  &.active {
+    filter: hue-rotate(80deg) blur(10px);
   }
-  .wrapper{
+  .wrapper {
     position: absolute;
     top: 20%;
     left: 10%;
-  
-    h1{
-      font-size:6vw ;
+
+    h1 {
+      font-size: 7vw;
       margin: 10px 0;
-      color:rgba($color: white, $alpha: .9);
+      color: rgba($color: white, $alpha: 0.9);
     }
-    h2{
-      color:rgba($color: white, $alpha: .8);
-      font-size: 35px; 
+    h2 {
+      color: rgba($color: white, $alpha: 0.8);
+      font-size: 6vw;
     }
 
-    h3{ 
-
-      span{
-        font-size: 30px;
-        color: rgba($color: white, $alpha: .6);
+    h3 {
+      span {
+        font-size: 6vw;
+        color: rgba($color: white, $alpha: 0.6);
       }
-      
+
       .ityped-cursor {
         animation: blink 1s infinite;
       }
       @keyframes blink {
-        50%{opacity: 1;}
-        100%{
+        50% {
+          opacity: 1;
+        }
+        100% {
           opacity: 0;
         }
       }
@@ -47,18 +46,20 @@
   }
 
   a {
-  position: absolute;
-  bottom: 10px;
-  left: calc(50% - 45px);
+    position: absolute;
+    bottom: 10px;
+    left: calc(50% - 45px);
 
-    .arrow{
+    .arrow {
       font-size: 90px;
       color: black;
       animation: arrowBlink 1s infinite;
     }
-   
+
     @keyframes arrowBlink {
-      100%{opacity: 0;}
+      100% {
+        opacity: 0;
+      }
     }
   }
 }
