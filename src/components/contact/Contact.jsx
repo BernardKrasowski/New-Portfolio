@@ -1,15 +1,19 @@
 import React from "react";
 import "./contact.scss";
-import imgContact from "../../images/contact.jpg";
+import KeyboardArrowDownIcon from "@material-ui/icons/KeyboardArrowDown";
+import { IconButton } from "@material-ui/core";
 
-function Contact() {
+function Contact({ menuOpen }) {
   return (
-    <div className="contact" id="contact">
-      <div className="left">
-        <img src={imgContact} alt="" />
-      </div>
-      <div className="right">
-        <h2>Contact.</h2>
+    <div className={`contact_wrapper ${menuOpen && "active"}`}>
+      <a href="#intro">
+        <IconButton>
+          <KeyboardArrowDownIcon className="arrow" />
+        </IconButton>
+      </a>
+      <div className="contact" id="contact">
+        <h2>Contact</h2>
+        <div className="img"></div>
         <form>
           <input type="text" placeholder="Email" />
           <textarea placeholder="Message"></textarea>

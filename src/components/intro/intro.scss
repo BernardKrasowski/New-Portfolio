@@ -54,6 +54,8 @@
       font-size: 90px;
       color: black;
       animation: arrowBlink 1s infinite;
+      background-color: grey;
+      border-radius: 50%;
     }
 
     @keyframes arrowBlink {

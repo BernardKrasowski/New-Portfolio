@@ -1,0 +1,92 @@
+@import "../../global.scss";
+
+.active {
+  background-color: grey;
+}
+.contact_wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transition: 1s ease;
+  .arrow {
+    background-color: grey;
+    border-radius: 50%;
+    font-size: 90px;
+    color: black;
+    animation: arrowBlink 1s infinite;
+    transform: rotate(180deg);
+  }
+
+  .contact {
+    width: 600px;
+    height: 80%;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+      rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+      rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    h2 {
+      text-transform: uppercase;
+    }
+    .img {
+      width: 300px;
+      height: 40px;
+      background-image: url("../../images/contact_us.png");
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+      margin-bottom: 30px;
+      margin-top: 30px;
+    }
+
+    form {
+      height: 500px;
+      width: 500px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      input {
+        border: none;
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+          rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+          rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+        text-align: center;
+        outline: none;
+        font-size: 14px;
+        width: 300px;
+        height: 30px;
+      }
+      textarea {
+        border: none;
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+          rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+          rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+        margin-top: 20px;
+        font-size: 14px;
+        outline: none;
+        width: 300px;
+        height: 300px;
+      }
+      button {
+        margin-top: 20px;
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+          rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+          rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+        width: 150px;
+        height: 30px;
+        color: white;
+        background-color: crimson;
+        border: none;
+        border-radius: 10px;
+        font-weight: 500;
+        cursor: pointer;
+      }
+    }
+  }
+}
