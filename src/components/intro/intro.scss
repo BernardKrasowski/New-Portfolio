@@ -48,7 +48,8 @@
   a {
     position: absolute;
     bottom: 10px;
-    left: calc(50% - 45px);
+    left: 50%;
+    transform: translate(-50%, 0);
 
     .arrow {
       font-size: 90px;

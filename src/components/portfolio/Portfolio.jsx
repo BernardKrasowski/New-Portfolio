@@ -3,7 +3,7 @@ import PortfolioList from "../portfolioList/PortfolioList.jsx";
 import "./portfolio.scss";
 import KeyboardArrowDownIcon from "@material-ui/icons/KeyboardArrowDown";
 import { IconButton } from "@material-ui/core";
-import { projectsReact, projectsGame } from "../../data.jsx";
+import { projectsReact, projectsGames } from "../../data.jsx";
 
 export default function Portfolio() {
   const [selected, setSelected] = useState("react");
@@ -18,13 +18,21 @@ export default function Portfolio() {
       title: "JavaScript Games",
     },
   ];
-
-  // useEffect(() => {
-  //   switch (selected) {
-  //     case "react":
-  //       setData(projectsReact);
-  //   }
-  // }, [selected]);
+  useEffect(() => {
+    switch (selected) {
+      case "react":
+        setData(projectsReact);
+        break;
+      case "javascript games":
+        setData(projectsGames);
+        break;
+      default:
+        setData(projectsReact);
+    }
+  }, [selected]);
+  const showDescription = (e) => {
+    console.log(e.target);
+  };
 
   return (
     <div className="portfolio" id="portfolio">
@@ -40,13 +48,15 @@ export default function Portfolio() {
         ))}
       </ul>
       <div className="container">
-        <div className="item">
-          <img
-            src="https://hubertkajdan.com/wp-content/uploads/2019/06/2019-06-20-Jezioro-Lednickie-010-Pano-1024x663.jpg"
-            alt=""
-          />
-          <h3>Banking App</h3>
-        </div>
+        {data.map((d) => (
+          <div className="itemWrapper">
+            <h3>{d.title}</h3>
+            <div className="item" onClick={showDescription}>
+              <img src={d.img} alt="" />
+            </div>
+            <div className="icons">{d.icons}</div>
+          </div>
+        ))}
       </div>
       <a href="#contact">
         <IconButton>
