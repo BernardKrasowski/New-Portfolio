@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./contact.scss";
 import KeyboardArrowDownIcon from "@material-ui/icons/KeyboardArrowDown";
 import { IconButton } from "@material-ui/core";
+import { createPost } from "../axios/index.js";
 
 function Contact({ menuOpen }) {
   const [email, setEmail] = useState("");
@@ -16,7 +17,9 @@ function Contact({ menuOpen }) {
         email,
         message,
       };
-      postEmailMessage();
+      postEmailMessage(emailMessage);
+      setEmail("");
+      setMessage("");
     } else {
       !verificationMessage && alert(`You didn't write a message.`);
       !verificationEmail && alert(`Wrong Email`);
@@ -30,8 +33,8 @@ function Contact({ menuOpen }) {
   const checkMessage = () => {
     return message ? true : false;
   };
-  const postEmailMessage = () => {
-    console.log("email wyslany");
+  const postEmailMessage = (emailMessage) => {
+    createPost(emailMessage);
   };
 
   return (

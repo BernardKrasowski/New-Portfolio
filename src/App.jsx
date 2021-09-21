@@ -5,7 +5,7 @@ import Intro from "./components/intro/Intro.jsx";
 import Portfolio from "./components/portfolio/Portfolio.jsx";
 import Contact from "./components/contact/Contact.jsx";
 
-import { useState } from "react";
+import React, { useState } from "react";
 
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);

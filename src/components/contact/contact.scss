@@ -1,16 +1,14 @@
 @import "../../global.scss";
-
 .active {
   background-color: grey;
 }
 .contact_wrapper {
   position: relative;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
   transition: 1s ease;
-
   .contact {
     width: 600px;
     height: 80%;
@@ -21,9 +19,9 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-
     h2 {
       text-transform: uppercase;
+      font-size: 20px;
     }
     .img {
       width: 300px;
@@ -35,7 +33,6 @@
       margin-bottom: 30px;
       margin-top: 30px;
     }
-
     form {
       height: 500px;
       width: 500px;
@@ -81,12 +78,82 @@
       }
     }
   }
-  .arrow {
-    background-color: grey;
-    border-radius: 50%;
-    font-size: 90px;
-    color: black;
-    animation: arrowBlink 1s infinite;
-    transform: rotate(180deg);
+  a {
+    position: absolute;
+    bottom: 0;
+    height: 140px;
+    .arrow {
+      font-size: 90px;
+      color: black;
+      animation: arrowBlink 1s infinite;
+      background-color: grey;
+      border-radius: 50%;
+      transform: rotate(180deg);
+    }
+  }
+}
+@media (max-width: 641px) {
+  .contact_wrapper {
+    .contact {
+      width: 90vw;
+      height: 80vh;
+      .img {
+        margin-bottom: 2%;
+        margin-top: 2%;
+      }
+      form {
+        button {
+          margin-bottom: 20px;
+        }
+      }
+    }
+    .arrow {
+      background-color: grey;
+      border-radius: 50%;
+      font-size: 70px;
+      color: black;
+      animation: arrowBlink 1s infinite;
+      transform: rotate(180deg);
+    }
+  }
+}
+@media (min-width: 1023px) and (max-width: 1025px) {
+  .contact_wrapper {
+    .contact {
+      width: 80%;
+      height: 80%;
+      h2 {
+        font-size: 50px;
+      }
+      form {
+        height: 800px;
+        width: 90%;
+        justify-content: center;
+
+        input {
+          font-size: 25px;
+          width: 80%;
+          height: 50px;
+        }
+        textarea {
+          margin-top: 20px;
+          font-size: 25px;
+          outline: none;
+          width: 80%;
+          height: 600px;
+        }
+        button {
+          margin-top: 30px;
+          font-size: 30px;
+          width: 300px;
+          height: 60px;
+        }
+      }
+    }
+    a {
+      .arrow {
+        margin-top: 20px;
+      }
+    }
   }
 }
