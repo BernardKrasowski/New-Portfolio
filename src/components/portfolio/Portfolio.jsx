@@ -55,6 +55,7 @@ export default function Portfolio() {
             <div className="item" onClick={showDescription}>
               <img src={d.img} alt="" />
             </div>
+            <h3>{d.linkGitHub}</h3>
             <div className="icons">{d.icons}</div>
           </div>
         ))}

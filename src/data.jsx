@@ -21,6 +21,7 @@ export const projectsGames = [
     id: 1,
     title: "Saper",
     img: imgSaper,
+    linkGitHub: "link",
     icons: (
       <>
         <i class="fab fa-html5" style={{ color: "orange", fontSize: 40 }}></i>
