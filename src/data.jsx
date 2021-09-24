@@ -9,11 +9,13 @@ export const projectsReact = [
     id: 1,
     title: "Weather app",
     img: wheaterApp,
+    urlGitHub: "https://github.com/BernardKrasowski/Weatherapp",
   },
   {
     id: 2,
     title: "Word Search",
     img: wordSearch,
+    urlGitHub: "https://github.com/BernardKrasowski/Word-Search",
   },
 ];
 export const projectsGames = [
@@ -21,7 +23,7 @@ export const projectsGames = [
     id: 1,
     title: "Saper",
     img: imgSaper,
-    linkGitHub: "link",
+    urlGitHub: "https://github.com/BernardKrasowski/Saper-game",
     icons: (
       <>
         <i class="fab fa-html5" style={{ color: "orange", fontSize: 40 }}></i>
@@ -40,6 +42,7 @@ export const projectsGames = [
     id: 2,
     title: "BlackJack",
     img: imgBlackJack,
+    urlGitHub: "https://github.com/BernardKrasowski/BlackJack",
     icons: (
       <>
         <i class="fab fa-html5" style={{ color: "orange", fontSize: 40 }}></i>
@@ -58,6 +61,7 @@ export const projectsGames = [
     id: 2,
     title: "Rock-Paper-Scissors",
     img: imgRockPaperScissor,
+    urlGitHub: "https://github.com/BernardKrasowski/Rock_paper_scissors",
     icons: (
       <>
         <i class="fab fa-html5" style={{ color: "orange", fontSize: 40 }}></i>
