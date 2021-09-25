@@ -1,6 +1,6 @@
 import "./menu.scss";
 
-export default function Menu({ menuOpen, setMenuOpen }) {
+export default function Menu({ menuOpen, setMenuOpen, admin }) {
   return (
     <div className={`menu ${menuOpen && "active"}`}>
       <ul onClick={() => setMenuOpen(false)}>
