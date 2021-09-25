@@ -7,7 +7,7 @@ import Contact from "./components/contact/Contact.jsx";
 import Login from "./components/Login/Login.jsx";
 import React, { useState } from "react";
 import { AppContext, defaultObject } from "./AppContext.js";
-
+import AdminPage from "./components/AdminPage/AdminPage";
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -35,7 +35,7 @@ function App() {
           <Intro menuOpen={menuOpen} />
           <Portfolio />
           <Contact menuOpen={menuOpen} />
-          {state.isUserLogged ? <h3>Dziala</h3> : console.log("nie dziala")}
+          {state.isUserLogged ? <AdminPage /> : console.log("nie dziala")}
         </div>
       </AppContext.Provider>
     </div>

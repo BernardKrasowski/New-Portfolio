@@ -1,12 +1,29 @@
-import React from "react";
+import React, { useState } from "react";
 import "./loginWindow.scss";
 import { AppContext } from "../../../AppContext";
 
 function LoginWindow({ closeLoginWindow }) {
+  const [state, setState] = useState({
+    login: "",
+    password: "",
+  });
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+
+    setState((prevState) => ({
+      ...prevState,
+      [name]: value,
+    }));
+  };
   const submitPassword = (e, toggleLoggedState) => {
     e.preventDefault();
-    toggleLoggedState();
-    closeLoginWindow(false);
+    if (state.login === "admin" && state.password === "admin") {
+      toggleLoggedState();
+      closeLoginWindow(false);
+    } else {
+      setState({ login: "", password: "" });
+    }
+    return;
   };
   return (
     <AppContext.Consumer>
@@ -18,9 +35,23 @@ function LoginWindow({ closeLoginWindow }) {
             }
             className="loginForm"
           >
-            <input type="login" placeholder="Login" />
-            <input type="password" placeholder="password" />
-            <button>Submit</button>
+            <input
+              type="login"
+              name="login"
+              placeholder="Login"
+              className="loginPage__input"
+              value={state.login}
+              onChange={handleChange}
+            />
+            <input
+              type="password"
+              name="password"
+              placeholder="Password"
+              className="loginPage__input"
+              value={state.password}
+              onChange={handleChange}
+            />
+            <button className="btnSubmit">Submit</button>
           </form>
         </div>
       )}
