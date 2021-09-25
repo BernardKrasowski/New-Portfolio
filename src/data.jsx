@@ -20,7 +20,7 @@ export const projectsReact = [
 ];
 export const projectsGames = [
   {
-    id: 1,
+    id: 3,
     title: "Saper",
     img: imgSaper,
     urlGitHub: "https://github.com/BernardKrasowski/Saper-game",
@@ -39,7 +39,7 @@ export const projectsGames = [
     ),
   },
   {
-    id: 2,
+    id: 4,
     title: "BlackJack",
     img: imgBlackJack,
     urlGitHub: "https://github.com/BernardKrasowski/BlackJack",
@@ -58,7 +58,7 @@ export const projectsGames = [
     ),
   },
   {
-    id: 2,
+    id: 5,
     title: "Rock-Paper-Scissors",
     img: imgRockPaperScissor,
     urlGitHub: "https://github.com/BernardKrasowski/Rock_paper_scissors",

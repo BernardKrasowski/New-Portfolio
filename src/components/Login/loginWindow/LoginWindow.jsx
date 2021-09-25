@@ -1,15 +1,30 @@
 import React from "react";
 import "./loginWindow.scss";
+import { AppContext } from "../../../AppContext";
 
-function LoginWindow() {
+function LoginWindow({ closeLoginWindow }) {
+  const submitPassword = (e, toggleLoggedState) => {
+    e.preventDefault();
+    toggleLoggedState();
+    closeLoginWindow(false);
+  };
   return (
-    <div className="loginWindow">
-      <form action="submit" className="loginForm">
-        <label htmlFor="">Login:</label> <input type="text" />
-        <label htmlFor="">Password:</label> <input type="text" />
-        <button>Submit</button>
-      </form>
-    </div>
+    <AppContext.Consumer>
+      {({ toggleLoggedState }) => (
+        <div className="loginWindow">
+          <form
+            onSubmit={(e) =>
+              submitPassword(e, toggleLoggedState, closeLoginWindow)
+            }
+            className="loginForm"
+          >
+            <input type="login" placeholder="Login" />
+            <input type="password" placeholder="password" />
+            <button>Submit</button>
+          </form>
+        </div>
+      )}
+    </AppContext.Consumer>
   );
 }
 

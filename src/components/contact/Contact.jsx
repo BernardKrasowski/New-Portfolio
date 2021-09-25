@@ -28,7 +28,7 @@ function Contact({ menuOpen }) {
 
   const checkEmail = () => {
     const index = [...email].findIndex((item) => item === "@");
-    return index != -1 ? true : false;
+    return index !== -1 ? true : false;
   };
   const checkMessage = () => {
     return message ? true : false;

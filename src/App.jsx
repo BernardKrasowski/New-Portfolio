@@ -6,20 +6,38 @@ import Portfolio from "./components/portfolio/Portfolio.jsx";
 import Contact from "./components/contact/Contact.jsx";
 import Login from "./components/Login/Login.jsx";
 import React, { useState } from "react";
+import { AppContext, defaultObject } from "./AppContext.js";
 
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [adminPage, setAdminPage] = useState(false);
+
+  const [state, setState] = useState({
+    isUserLogged: defaultObject.isUserLogged,
+  });
+
+  const handlerToggleStateIsLogged = () => {
+    setState((prevState) => ({
+      isUserLogged: !prevState.isUserLogged,
+    }));
+  };
   return (
     <div className="app">
-      <Login />
-      <Topbar menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
-      <Menu menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
-      <div className="sections">
-        <Intro menuOpen={menuOpen} />
-        <Portfolio />
-        <Contact menuOpen={menuOpen} />
-      </div>
+      <AppContext.Provider
+        value={{
+          isUserLogged: state.isUserLogged,
+          toggleLoggedState: handlerToggleStateIsLogged,
+        }}
+      >
+        <Login />
+        <Topbar menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
+        <Menu menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
+        <div className="sections">
+          <Intro menuOpen={menuOpen} />
+          <Portfolio />
+          <Contact menuOpen={menuOpen} />
+          {state.isUserLogged ? <h3>Dziala</h3> : console.log("nie dziala")}
+        </div>
+      </AppContext.Provider>
     </div>
   );
 }

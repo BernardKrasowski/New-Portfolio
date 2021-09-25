@@ -4,6 +4,7 @@ import "./portfolio.scss";
 import KeyboardArrowDownIcon from "@material-ui/icons/KeyboardArrowDown";
 import { IconButton } from "@material-ui/core";
 import { projectsReact, projectsGames } from "../../data.jsx";
+
 export default function Portfolio() {
   const [selected, setSelected] = useState("react");
   const [data, setData] = useState([]);
@@ -50,6 +51,7 @@ export default function Portfolio() {
       <div className="container">
         {data.map((d) => (
           <div
+            key={d.id}
             className="itemWrapper"
             onClick={() => (window.location.href = `${d.urlGitHub}`)}
           >
