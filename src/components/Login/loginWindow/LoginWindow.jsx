@@ -22,6 +22,8 @@ function LoginWindow({ closeLoginWindow }) {
       closeLoginWindow(false);
     } else {
       setState({ login: "", password: "" });
+      closeLoginWindow(false);
+      alert("Wrong Password and Login (password:admin, login:admin)");
     }
     return;
   };
@@ -51,6 +53,7 @@ function LoginWindow({ closeLoginWindow }) {
               value={state.password}
               onChange={handleChange}
             />
+
             <button className="btnSubmit">Submit</button>
           </form>
         </div>
