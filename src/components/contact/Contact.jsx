@@ -5,7 +5,7 @@ import { IconButton } from "@material-ui/core";
 import { createPost } from "../axios/index.js";
 import { AppContext } from "../../AppContext";
 function Contact({ menuOpen }) {
-  const [email, setEmail] = useState("");
+  const [name, setName] = useState("");
   const [message, setMessage] = useState("");
 
   const rotate = {
@@ -18,20 +18,20 @@ function Contact({ menuOpen }) {
     const verificationMessage = checkMessage();
     if (verificationEmail && verificationMessage) {
       const emailMessage = {
-        email,
+        name,
         message,
       };
       postEmailMessage(emailMessage);
-      setEmail("");
+      setName("");
       setMessage("");
     } else {
       !verificationMessage && alert(`You didn't write a message.`);
-      !verificationEmail && alert(`Wrong Email`);
+      !verificationEmail && alert(`Wrong Name`);
     }
   };
 
   const checkEmail = () => {
-    const index = [...email].findIndex((item) => item === "@");
+    const index = [...name].findIndex((item) => item === "@");
     return index !== -1 ? true : false;
   };
   const checkMessage = () => {
@@ -48,8 +48,8 @@ function Contact({ menuOpen }) {
         <div className="img"></div>
         <form onSubmit={sendEmail}>
           <input
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
+            value={name}
+            onChange={(e) => setName(e.target.value)}
             type="text"
             placeholder="Email"
           />
