@@ -3,6 +3,7 @@ import "./adminPage.scss";
 import Logout from "./logout/Logout.jsx";
 import { fetchPost } from "../axios";
 import Messages from "./messages/Messages.jsx";
+
 function AdminPage() {
   const [messages, setMessages] = useState([]);
 

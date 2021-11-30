@@ -1,0 +1,34 @@
+.wrapper__arrow {
+  position: absolute;
+  bottom: 0;
+  height: 92px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  overflow: hidden;
+  @media (min-device-height: 319px) and (max-device-height: 500px) and (orientation: landscape) {
+    display: none;
+  }
+  @media (min-device-height: 319px) and (max-device-height: 630px) and (orientation: portrait) {
+    display: none;
+  }
+  .arrow {
+    font-size: 70px;
+    color: black;
+    animation: arrowBlink 1s infinite;
+    background-color: grey;
+    border-radius: 50%;
+  }
+  .arrow360 {
+    font-size: 70px;
+    color: black;
+    animation: arrowBlink 1s infinite;
+    background-color: grey;
+    border-radius: 50%;
+    transform: rotate(180deg);
+  }
+}
+@keyframes arrowBlink {
+  100% {
+    opacity: 0;
+  }
+}

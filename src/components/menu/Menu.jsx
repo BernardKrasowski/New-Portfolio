@@ -1,4 +1,5 @@
 import "./menu.scss";
+import { AppContext } from "../../AppContext.js";
 
 export default function Menu({ menuOpen, setMenuOpen }) {
   return (
@@ -13,9 +14,17 @@ export default function Menu({ menuOpen, setMenuOpen }) {
         <li>
           <a href="#contact">Contact</a>
         </li>
-        <li>
-          <a href="#adminPage">Admin Page</a>
-        </li>
+        <AppContext.Consumer>
+          {({ isUserLogged }) => {
+            if (isUserLogged) {
+              return (
+                <li>
+                  <a href="#adminPage">Admin Page</a>
+                </li>
+              );
+            }
+          }}
+        </AppContext.Consumer>
       </ul>
     </div>
   );

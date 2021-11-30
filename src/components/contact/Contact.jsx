@@ -1,16 +1,11 @@
 import React, { useState } from "react";
 import "./contact.scss";
-import KeyboardArrowDownIcon from "@material-ui/icons/KeyboardArrowDown";
-import { IconButton } from "@material-ui/core";
 import { createPost } from "../axios/index.js";
 import { AppContext } from "../../AppContext";
+import ArrowButton from "../arrowButton/ArrowButton";
 function Contact({ menuOpen }) {
   const [name, setName] = useState("");
   const [message, setMessage] = useState("");
-
-  const rotate = {
-    transform: `rotate(${360}deg)`,
-  };
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -63,14 +58,10 @@ function Contact({ menuOpen }) {
       </div>
       <AppContext.Consumer>
         {({ isUserLogged }) => (
-          <a href={`${isUserLogged ? "#adminPage" : "#intro"}`}>
-            <IconButton>
-              <KeyboardArrowDownIcon
-                style={isUserLogged ? rotate : null}
-                className="arrow"
-              />
-            </IconButton>
-          </a>
+          <ArrowButton
+            path={`${isUserLogged ? "#adminPage" : "#intro"}`}
+            arrowDirection={isUserLogged ? "arrow" : "arrow360"}
+          />
         )}
       </AppContext.Consumer>
     </div>

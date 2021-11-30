@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from "react";
 import PortfolioList from "../portfolioList/PortfolioList.jsx";
 import "./portfolio.scss";
-import KeyboardArrowDownIcon from "@material-ui/icons/KeyboardArrowDown";
-import { IconButton } from "@material-ui/core";
+import ArrowButton from "../arrowButton/ArrowButton";
 import { projectsReact, projectsGames } from "../../data.jsx";
 
 export default function Portfolio() {
@@ -55,19 +54,17 @@ export default function Portfolio() {
             className="itemWrapper"
             onClick={() => (window.location.href = `${d.urlGitHub}`)}
           >
-            <h3>{d.title}</h3>
-            <div className="item" onClick={showDescription}>
-              <img src={d.img} alt="" />
+            <div className="itemContainer">
+              <h3>{d.title}</h3>
+              <div className="item" onClick={showDescription}>
+                <img src={d.img} alt="" />
+              </div>
+              <div className="icons">{d.icons}</div>
             </div>
-            <div className="icons">{d.icons}</div>
           </div>
         ))}
       </div>
-      <a href="#contact">
-        <IconButton>
-          <KeyboardArrowDownIcon className="arrow" />
-        </IconButton>
-      </a>
+      <ArrowButton path="#contact" />
     </div>
   );
 }

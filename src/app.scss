@@ -1,21 +1,26 @@
+@import "./global.scss";
+
 .app {
+  max-width: 1920px;
   height: 100vh;
+  margin: 0 auto;
 
   .sections {
     width: 100%;
-    height: calc(100vh - 70px);
+    height: calc(100vh - 60px);
     position: relative;
-    top: 70px;
+    top: 60px;
     scroll-behavior: smooth;
     scroll-snap-type: y mandatory;
     scrollbar-width: none; // for firefox
+
     &::-webkit-scrollbar {
       display: none;
     }
 
     > * {
-      width: 100vw;
-      height: calc(100vh - 70px);
+      width: inherit;
+      height: calc(100vh - 60px);
       scroll-snap-align: start;
     }
   }

@@ -7,7 +7,9 @@ li {
   border-radius: 10px;
   cursor: pointer;
   transition: all 0.2s ease;
-
+  @include media(">=tablet") {
+    font-size: 25px;
+  }
   &.active {
     background-color: $mainColor;
     color: white;

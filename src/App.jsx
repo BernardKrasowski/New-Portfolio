@@ -8,7 +8,6 @@ import Login from "./components/Login/Login.jsx";
 import React, { useState } from "react";
 import { AppContext, defaultObject } from "./AppContext.js";
 import AdminPage from "./components/AdminPage/AdminPage";
-
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
 
