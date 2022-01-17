@@ -1,7 +1,7 @@
 @import "../../global.scss";
 
 .menu {
-  width: 100%;
+  width: 30%;
   height: 100vh;
   background-color: white;
   position: fixed;
@@ -19,8 +19,14 @@
     background-color: $mainColor;
   }
 
+  @include media("<=tablet") {
+    width: 100%;
+  }
   ul {
-    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
     li {
       margin-bottom: 25px;
