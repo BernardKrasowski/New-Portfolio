@@ -56,8 +56,12 @@ export default function Portfolio() {
           >
             <div className="itemContainer">
               <h3>{d.title}</h3>
-              <div className="item" onClick={showDescription}>
-                <img src={d.img} alt="" />
+              <div
+                className="item"
+                onClick={showDescription}
+                style={{ backgroundImage: `url(${d.img})` }}
+              >
+                {/* <img src={d.img} alt="" /> */}
               </div>
               <div className="icons">{d.icons}</div>
             </div>
