@@ -56,14 +56,14 @@ function Contact({ menuOpen }) {
           <button type="submit">Send</button>
         </form>
       </div>
-      <AppContext.Consumer>
+      {/* <AppContext.Consumer>
         {({ isUserLogged }) => (
           <ArrowButton
             path={`${isUserLogged ? "#adminPage" : "#intro"}`}
             arrowDirection={isUserLogged ? "arrow" : "arrow360"}
           />
         )}
-      </AppContext.Consumer>
+      </AppContext.Consumer> */}
     </div>
   );
 }

@@ -23,7 +23,7 @@ export default function Intro({ menuOpen }) {
           <span ref={textRef}></span>
         </h3>
       </div>
-      <ArrowButton path="#portfolio" />
+      {/* <ArrowButton path="#portfolio" /> */}
     </div>
   );
 }

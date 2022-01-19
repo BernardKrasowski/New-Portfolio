@@ -68,7 +68,7 @@ export default function Portfolio() {
           </div>
         ))}
       </div>
-      <ArrowButton path="#contact" />
+      {/* <ArrowButton path="#contact" /> */}
     </div>
   );
 }
