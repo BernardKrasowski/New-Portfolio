@@ -47,15 +47,21 @@
         rgba(0, 0, 0, 0.17) 0px 12px 13px;
 
       .itemContainer {
-        height: 300px;
-        width: 300px;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        @include media("<=tablet") {
+        @include media(">=phone") {
+          height: 170px;
+          width: 170px;
+        }
+        @include media(">=tablet") {
           height: 270px;
           width: 270px;
+        }
+        @include media(">=desktop") {
+          height: 300px;
+          width: 300px;
         }
 
         h3 {
