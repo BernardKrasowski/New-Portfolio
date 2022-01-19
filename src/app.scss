@@ -8,6 +8,7 @@
   .sections {
     width: 100%;
     height: calc(100vh - 60px);
+    background-color: red;
     position: relative;
     top: 60px;
     scroll-behavior: smooth;
@@ -21,6 +22,7 @@
     > * {
       width: inherit;
       height: calc(100vh - 60px);
+      top: 60px;
       scroll-snap-align: start;
     }
   }
