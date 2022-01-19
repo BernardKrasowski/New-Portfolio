@@ -2,13 +2,14 @@
 
 .app {
   max-width: 1920px;
-  height: 100vh;
+  height: 100%;
   margin: 0 auto;
 
   .sections {
     width: 100%;
+
     height: calc(100vh - 60px);
-    position: relative;
+    position: absolute;
     top: 60px;
     scroll-behavior: smooth;
     scroll-snap-type: y mandatory;
