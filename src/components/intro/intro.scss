@@ -8,8 +8,11 @@
   filter: brightness(50%);
   filter: hue-rotate(40deg);
   transition: 1s ease;
-  position: relative;
 
+  width: inherit;
+  height: calc(100vh - 60px);
+  top: 60px;
+  scroll-snap-align: start;
   &.active {
     filter: hue-rotate(80deg) blur(10px);
   }
