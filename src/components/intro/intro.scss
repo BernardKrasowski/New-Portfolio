@@ -9,10 +9,6 @@
   filter: hue-rotate(40deg);
   transition: 1s ease;
 
-  width: inherit;
-  height: calc(100vh - 60px);
-  top: 60px;
-  scroll-snap-align: start;
   &.active {
     filter: hue-rotate(80deg) blur(10px);
   }
