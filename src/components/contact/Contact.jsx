@@ -38,25 +38,26 @@ function Contact({ menuOpen }) {
 
   return (
     <div className={`contact ${menuOpen && "active"}`}>
-      <div className="contact_wrapper" id="contact">
-        <h2>Contact</h2>
-        <div className="img"></div>
-        <form onSubmit={sendEmail}>
-          <input
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-            type="text"
-            placeholder="Email"
-          />
-          <textarea
-            value={message}
-            onChange={(e) => setMessage(e.target.value)}
-            placeholder="Message"
-          ></textarea>
-          <button type="submit">Send</button>
-        </form>
-      </div>
-      {/* <AppContext.Consumer>
+      <div className="contact_wrapper">
+        <div className="contact_cart" id="contact">
+          <h2>Contact</h2>
+          <div className="img"></div>
+          <form onSubmit={sendEmail}>
+            <input
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+              type="text"
+              placeholder="Email"
+            />
+            <textarea
+              value={message}
+              onChange={(e) => setMessage(e.target.value)}
+              placeholder="Message"
+            ></textarea>
+            <button type="submit">Send</button>
+          </form>
+        </div>
+        {/* <AppContext.Consumer>
         {({ isUserLogged }) => (
           <ArrowButton
             path={`${isUserLogged ? "#adminPage" : "#intro"}`}
@@ -64,6 +65,7 @@ function Contact({ menuOpen }) {
           />
         )}
       </AppContext.Consumer> */}
+      </div>
     </div>
   );
 }
