@@ -40,7 +40,6 @@ function Contact({ menuOpen }) {
     <div className={`contact ${menuOpen && "active"}`}>
       <div className="contact_wrapper">
         <div className="contact_cart" id="contact">
-          <h2>Contact</h2>
           <div className="img"></div>
           <form onSubmit={sendEmail}>
             <input
