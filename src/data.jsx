@@ -3,7 +3,7 @@ import imgBlackJack from "./images/blackJack/blackJack1.png";
 import imgRockPaperScissor from "./images/rockPaperScissors/img1.png";
 import wheaterApp from "./images/weatherapp/weatherapp.jpg";
 import wordSearch from "./images/wordSearch/wordSearch.jpg";
-
+import eCommerce from "./images/eCommerce/eCommerce.jpg";
 export const projectsReact = [
   {
     id: 1,
@@ -16,6 +16,12 @@ export const projectsReact = [
     title: "Word Search",
     img: wordSearch,
     urlGitHub: "https://github.com/BernardKrasowski/Word-Search",
+  },
+  {
+    id: 3,
+    title: "e-Commerce (work in progress)",
+    img: eCommerce,
+    urlGitHub: "https://ecommerce-a69f9.web.app/",
   },
 ];
 export const projectsGames = [
