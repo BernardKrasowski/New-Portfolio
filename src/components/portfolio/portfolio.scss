@@ -2,92 +2,95 @@
 
 .portfolio {
   position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  top: 60px;
-
-  h1 {
-    overflow: hidden;
-    font-size: 25px;
-    @media (min-device-height: 319px) and (max-device-height: 500px) and (orientation: landscape) {
-      font-size: 15px;
-    }
-    @include media(">=tablet") {
-      font-size: 35px;
-    }
-  }
-
-  ul {
-    overflow: hidden;
-    list-style: none;
+  .wrapper_portfolio {
+    height: calc(100% - 60px);
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    @include media(">=tablet") {
-      margin: 40px auto;
+    position: relative;
+    top: 60px;
+    h1 {
+      overflow: hidden;
+      font-size: 25px;
+      @media (min-device-height: 319px) and (max-device-height: 500px) and (orientation: landscape) {
+        font-size: 15px;
+      }
+      @include media(">=tablet") {
+        font-size: 35px;
+      }
     }
-  }
-  .container {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    flex-wrap: wrap;
 
-    .itemWrapper {
+    ul {
+      overflow: hidden;
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      @include media(">=tablet") {
+        margin: 40px auto;
+      }
+    }
+    .container {
+      width: 100%;
+      height: 100%;
       display: flex;
       align-items: center;
       justify-content: space-around;
       flex-wrap: wrap;
-      overflow: hidden;
-      transition: transform 0.2s ease-in;
-      box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
-        rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
-        rgba(0, 0, 0, 0.17) 0px 12px 13px;
 
-      .itemContainer {
+      .itemWrapper {
         display: flex;
-        flex-direction: column;
         align-items: center;
-        justify-content: center;
-        @include media(">=phone") {
-          height: 170px;
-          width: 170px;
-        }
-        @include media(">=tablet") {
-          height: 270px;
-          width: 270px;
-        }
-        @include media(">=desktop") {
-          height: 300px;
-          width: 300px;
-        }
+        justify-content: space-around;
+        flex-wrap: wrap;
+        overflow: hidden;
+        transition: transform 0.2s ease-in;
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+          rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+          rgba(0, 0, 0, 0.17) 0px 12px 13px;
 
-        h3 {
-          height: 10%;
-          font-size: 15px;
-          margin-bottom: 5px;
-          margin-top: 5px;
-          z-index: 1;
+        .itemContainer {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          @include media(">=phone") {
+            height: 170px;
+            width: 170px;
+          }
           @include media(">=tablet") {
-            font-size: 20px;
+            height: 270px;
+            width: 270px;
+          }
+          @include media(">=desktop") {
+            height: 300px;
+            width: 300px;
+          }
+
+          h3 {
+            height: 10%;
+            font-size: 15px;
+            margin-bottom: 5px;
+            margin-top: 5px;
+            z-index: 1;
+            @include media(">=tablet") {
+              font-size: 20px;
+            }
+          }
+          .item {
+            width: 100%;
+            height: 70%;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            border-radius: 20px;
+            transition: 0.2s ease;
+            cursor: pointer;
           }
         }
-        .item {
-          width: 100%;
-          height: 70%;
-          background-position: center;
-          background-repeat: no-repeat;
-          background-size: contain;
-          border-radius: 20px;
-          transition: 0.2s ease;
-          cursor: pointer;
+        .icons {
+          height: 20%;
         }
-      }
-      .icons {
-        height: 20%;
       }
     }
   }

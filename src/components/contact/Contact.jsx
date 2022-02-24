@@ -37,8 +37,8 @@ function Contact({ menuOpen }) {
   };
 
   return (
-    <div className={`contact_wrapper ${menuOpen && "active"}`}>
-      <div className="contact" id="contact">
+    <div className={`contact ${menuOpen && "active"}`}>
+      <div className="contact_wrapper" id="contact">
         <h2>Contact</h2>
         <div className="img"></div>
         <form onSubmit={sendEmail}>

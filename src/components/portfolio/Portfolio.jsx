@@ -35,40 +35,42 @@ export default function Portfolio() {
 
   return (
     <div className="portfolio" id="portfolio">
-      <h1>Portfolio</h1>
-      <ul>
-        {list.map((item) => (
-          <PortfolioList
-            key={item.id}
-            title={item.title}
-            active={selected === item.id}
-            setSelected={setSelected}
-            id={item.id}
-          />
-        ))}
-      </ul>
-      <div className="container">
-        {data.map((d) => (
-          <div
-            key={d.id}
-            className="itemWrapper"
-            onClick={() => (window.location.href = `${d.urlGitHub}`)}
-          >
-            <div className="itemContainer">
-              <h3>{d.title}</h3>
-              <div
-                className="item"
-                onClick={showDescription}
-                style={{ backgroundImage: `url(${d.img})` }}
-              >
-                {/* <img src={d.img} alt="" /> */}
+      <div className="wrapper_portfolio">
+        <h1>Portfolio</h1>
+        <ul>
+          {list.map((item) => (
+            <PortfolioList
+              key={item.id}
+              title={item.title}
+              active={selected === item.id}
+              setSelected={setSelected}
+              id={item.id}
+            />
+          ))}
+        </ul>
+        <div className="container">
+          {data.map((d) => (
+            <div
+              key={d.id}
+              className="itemWrapper"
+              onClick={() => (window.location.href = `${d.urlGitHub}`)}
+            >
+              <div className="itemContainer">
+                <h3>{d.title}</h3>
+                <div
+                  className="item"
+                  onClick={showDescription}
+                  style={{ backgroundImage: `url(${d.img})` }}
+                >
+                  {/* <img src={d.img} alt="" /> */}
+                </div>
+                <div className="icons">{d.icons}</div>
               </div>
-              <div className="icons">{d.icons}</div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
+        {/* <ArrowButton path="#contact" /> */}
       </div>
-      {/* <ArrowButton path="#contact" /> */}
     </div>
   );
 }
