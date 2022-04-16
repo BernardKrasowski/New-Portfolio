@@ -56,7 +56,7 @@ export default function Portfolio() {
               onClick={() => (window.location.href = `${d.urlGitHub}`)}
             >
               <div className="itemContainer">
-                <h3>{d.title}</h3>
+                {/* <h3>{d.title}</h3> */}
                 <div
                   className="item"
                   onClick={showDescription}

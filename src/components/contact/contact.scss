@@ -1,101 +1,31 @@
 @import "../../global.scss";
 .active {
-  background-color: grey;
+  background-color: rgb(174, 167, 189);
 }
 .contact {
   position: relative;
-
-  .contact_wrapper {
-    height: calc(100% - 60px);
-    position: relative;
-    top: 60px;
+  display: flex;
+  align-items: center;
+  .left_screen {
+    height: 100%;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    transition: 1s ease;
-    .contact_cart {
-      padding-top: 60px;
-      box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
-        rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
-        rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-
-      width: 90%;
-      height: 95%;
-      @media (min-device-height: 319px) and (max-device-height: 500px) and (orientation: landscape) {
-        height: 95%;
-      }
-      h2 {
-        text-transform: uppercase;
-        font-size: 20px;
-        @media (min-device-height: 319px) and (max-device-height: 500px) and (orientation: landscape) {
-          font-size: 15px;
-          height: 30px;
-        }
-        @include media(">=tablet") {
-          font-size: 35px;
-          height: 65px;
-          margin: 20px auto;
-        }
-      }
-      .img {
-        margin: 5px auto;
-        width: 250px;
-        height: 40px;
-        background-image: url("../../images/contact_us.png");
-        background-size: contain;
-        background-position: center;
-        background-repeat: no-repeat;
-      }
-      form {
-        height: 100%;
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-
-        input {
-          border: none;
-          box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
-            rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
-            rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-          text-align: center;
-          outline: none;
-          font-size: 14px;
-          width: 60%;
-          max-width: 500px;
-          height: 30px;
-        }
-        textarea {
-          border: none;
-          box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
-            rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
-            rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-          margin-top: 5px;
-          font-size: 14px;
-          outline: none;
-          width: 60%;
-          max-width: 500px;
-          height: 300px;
-        }
-        button {
-          margin-top: 20px;
-          box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
-            rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
-            rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-          width: 150px;
-          height: 30px;
-          color: white;
-          background-color: crimson;
-          border: none;
-          border-radius: 10px;
-          font-weight: 500;
-          cursor: pointer;
-        }
-      }
+    justify-content: space-around;
+    width: 50%;
+    flex-wrap: wrap;
+    background-color: $mainColor;
+    .title {
+      color: rgb(252, 242, 242);
+      width: 100%;
+      text-align: center;
+      font-size: 30px;
     }
+  }
+  .line {
+    height: 80%;
+    width: 2px;
+    background-color: $mainColor;
+  }
+  .contact_form {
+    width: 49%;
   }
 }
