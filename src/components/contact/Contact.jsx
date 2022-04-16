@@ -1,14 +1,13 @@
 import React, { useState } from "react";
 import "./contact.scss";
 import { createPost } from "../axios/index.js";
-import { AppContext } from "../../AppContext";
-import ArrowButton from "../arrowButton/ArrowButton";
+// import { AppContext } from "../../AppContext";
+// import ArrowButton from "../arrowButton/ArrowButton";
 import Phone from "./img/phone.png";
 import Mail from "./img/mail.png";
 import github from "./img/github.png";
 import Cart from "./cart.component";
-import { Dry } from "@mui/icons-material";
-
+import Form from "./form.component";
 const contact_data = [
   {
     id: 1,
@@ -32,8 +31,9 @@ function Contact({ menuOpen }) {
   const [message, setMessage] = useState("");
   const [rightScreen, setRightScreen] = useState("");
 
-  const sendEmail = (e) => {
-    e.preventDefault();
+  const sendEmail = () => {
+    console.log("dziala");
+    // e.preventDefault();
     const verificationEmail = checkEmail();
     const verificationMessage = checkMessage();
     if (verificationEmail && verificationMessage) {
@@ -63,37 +63,28 @@ function Contact({ menuOpen }) {
 
   const showRightScreen = (id) => {
     setRightScreen(id);
-    console.log(rightScreen);
   };
 
   return (
     <div className={`contact ${menuOpen && "active"}`} id="contact">
       <div className="left_screen">
         <span className="title">
-          <p>
-            Have You Any Questions? <p> I'm at your services </p>
-          </p>
+          <p>Have You Any Questions?</p> <p> I'm at your services </p>
         </span>
         {contact_data.map((cart) => (
           <Cart key={cart.id} cart={cart} show={showRightScreen} />
         ))}
       </div>
       <div className="line"></div>
-      <form onSubmit={sendEmail} className="contact_form">
-        <input
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-          type="text"
-          placeholder="Email"
+      <div className="right_screen">
+        <Form
+          sendEmail={sendEmail}
+          name={name}
+          setName={setName}
+          message={message}
+          setMessage={setMessage}
         />
-        <textarea
-          value={message}
-          onChange={(e) => setMessage(e.target.value)}
-          placeholder="Message"
-        ></textarea>
-        <button type="submit">Send</button>
-      </form>
-
+      </div>
       {/* <AppContext.Consumer>
         {({ isUserLogged }) => (
           <ArrowButton

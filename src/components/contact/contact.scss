@@ -10,6 +10,7 @@
     height: 100%;
     display: flex;
     justify-content: space-around;
+    align-items: center;
     width: 50%;
     flex-wrap: wrap;
     background-color: $mainColor;
@@ -21,11 +22,14 @@
     }
   }
   .line {
-    height: 80%;
+    height: 100%;
     width: 2px;
-    background-color: $mainColor;
+
+    background-color: red;
   }
-  .contact_form {
-    width: 49%;
+  .right_screen {
+    width: 50%;
+    height: 100%;
+    background-color: lightgrey;
   }
 }
