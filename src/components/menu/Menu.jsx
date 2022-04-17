@@ -1,25 +1,26 @@
 import "./menu.scss";
 import { AppContext } from "../../AppContext.js";
+import { Link } from "react-router-dom";
 
 export default function Menu({ menuOpen, setMenuOpen }) {
   return (
     <div className={`menu ${menuOpen && "active"}`}>
       <ul onClick={() => setMenuOpen(false)}>
         <li>
-          <a href="#intro">Home</a>
+          <Link to="/">Home</Link>
         </li>
         <li>
-          <a href="#portfolio">Portfolio</a>
+          <Link to="portfolio">Portfolio</Link>
         </li>
         <li>
-          <a href="#contact">Contact</a>
+          <Link to="contact">Contact</Link>
         </li>
         <AppContext.Consumer>
           {({ isUserLogged }) => {
             if (isUserLogged) {
               return (
                 <li>
-                  <a href="#adminPage">Admin Page</a>
+                  <Link to="adminPage">Admin Page</Link>
                 </li>
               );
             }

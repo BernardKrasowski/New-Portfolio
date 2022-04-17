@@ -2,7 +2,8 @@ import React, { useEffect, useRef } from "react";
 import "./intro.scss";
 import { init } from "ityped";
 import ArrowButton from "../arrowButton/ArrowButton";
-export default function Intro({ menuOpen }) {
+
+const Intro = ({ menuOpen }) => {
   const textRef = useRef();
 
   useEffect(() => {
@@ -23,7 +24,8 @@ export default function Intro({ menuOpen }) {
           <span ref={textRef}></span>
         </h3>
       </div>
-      {/* <ArrowButton path="#portfolio" /> */}
+      <ArrowButton path="portfolio" />
     </div>
   );
-}
+};
+export default Intro;

@@ -1,33 +1,10 @@
-@import "./global.scss";
-
-.app {
-  max-width: 1920px;
+body {
   height: 100vh;
-  margin: 0 auto;
-  position: relative;
-
-  .sections {
-    width: 100%;
-
-    position: absolute;
-    height: calc(100vh - 60px);
-
-    top: 60px;
-
-    scroll-behavior: smooth;
-    scroll-snap-type: y mandatory;
-    scrollbar-width: none; // for firefox
-
-    &::-webkit-scrollbar {
-      display: none;
-    }
-
-    > * {
-      width: absolute;
-      height: calc(100vh - 60px);
-
-      top: 60px;
-      scroll-snap-align: start;
+  background-color: red;
+  #root {
+    height: 100%;
+    .app {
+      height: 100%;
     }
   }
 }

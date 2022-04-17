@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import "./contact.scss";
 import { createPost } from "../axios/index.js";
-// import { AppContext } from "../../AppContext";
-// import ArrowButton from "../arrowButton/ArrowButton";
+import { AppContext } from "../../AppContext";
+import ArrowButton from "../arrowButton/ArrowButton";
 import Phone from "./img/phone.png";
 import Mail from "./img/mail.png";
 import github from "./img/github.png";
@@ -85,14 +85,14 @@ function Contact({ menuOpen }) {
           setMessage={setMessage}
         />
       </div>
-      {/* <AppContext.Consumer>
+      <AppContext.Consumer>
         {({ isUserLogged }) => (
           <ArrowButton
-            path={`${isUserLogged ? "#adminPage" : "#intro"}`}
+            path={`${isUserLogged ? "adminPage" : "#"}`}
             arrowDirection={isUserLogged ? "arrow" : "arrow360"}
           />
         )}
-      </AppContext.Consumer> */}
+      </AppContext.Consumer>
     </div>
   );
 }
