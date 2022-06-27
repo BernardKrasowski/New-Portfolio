@@ -1,12 +1,10 @@
 import "./cart.styles.scss";
 
-const Cart = ({ cart, show }) => {
+const Cart = ({ data, img }) => {
   return (
-    <div className="cart_telephone" onClick={() => show(cart.id)}>
-      <div
-        className="img_phone"
-        style={{ backgroundImage: `url(${cart.img})` }}
-      ></div>
+    <div className="cart_contact">
+      <div className="img-cartContact">{img}</div>
+      <span className="img-cartData">{data}</span>
     </div>
   );
 };

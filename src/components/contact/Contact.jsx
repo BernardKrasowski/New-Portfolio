@@ -3,25 +3,26 @@ import "./contact.scss";
 import { createPost } from "../axios/index.js";
 import { AppContext } from "../../AppContext";
 import ArrowButton from "../arrowButton/ArrowButton";
-import Phone from "./img/phone.png";
-import Mail from "./img/mail.png";
-import github from "./img/github.png";
+
 import Cart from "./cart.component";
-import Form from "./form.component";
+import { ReactComponent as IconGitHub } from "./img/github-brands.svg";
+import { ReactComponent as IconPhone } from "./img/phone-solid.svg";
+import { ReactComponent as IconMail } from "./img/envelope-solid.svg";
+
 const contact_data = [
   {
     id: 1,
-    img: Phone,
+    img: <IconPhone className="IconPhone" />,
     data: "+44 77 62 914 630",
   },
   {
     id: 2,
-    img: Mail,
+    img: <IconMail className="IconMail" />,
     data: "bernardkrasowski111@gmail.com",
   },
   {
     id: 3,
-    img: github,
+    img: <IconGitHub className="IconGitHub" />,
     data: "https://github.com/BernardKrasowski",
   },
 ];
@@ -29,7 +30,6 @@ const contact_data = [
 function Contact({ menuOpen }) {
   const [name, setName] = useState("");
   const [message, setMessage] = useState("");
-  const [rightScreen, setRightScreen] = useState("");
 
   const sendEmail = () => {
     console.log("dziala");
@@ -61,29 +61,17 @@ function Contact({ menuOpen }) {
     createPost(emailMessage);
   };
 
-  const showRightScreen = (id) => {
-    setRightScreen(id);
-  };
-
   return (
     <div className={`contact ${menuOpen && "active"}`} id="contact">
       <div className="left_screen">
         <span className="title">
           <p>Have You Any Questions?</p> <p> I'm at your services </p>
         </span>
-        {contact_data.map((cart) => (
-          <Cart key={cart.id} cart={cart} show={showRightScreen} />
-        ))}
       </div>
-      <div className="line"></div>
       <div className="right_screen">
-        <Form
-          sendEmail={sendEmail}
-          name={name}
-          setName={setName}
-          message={message}
-          setMessage={setMessage}
-        />
+        {contact_data.map(({ id, img, data }) => (
+          <Cart key={id} data={data} img={img} />
+        ))}
       </div>
       <AppContext.Consumer>
         {({ isUserLogged }) => (
