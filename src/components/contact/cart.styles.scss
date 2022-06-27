@@ -1,12 +1,14 @@
+@import "../../global.scss";
+
 .cart_contact {
   height: 100px;
-
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
   box-shadow: 0px 5px 15px #dae2e8e0;
   transition: 0.2s ease-in;
+
   &:hover {
     transform: scale(1.1);
   }
@@ -17,6 +19,12 @@
     .IconMail {
       height: 50px;
       width: 50px;
+    }
+  }
+  .img-cartData {
+    font-size: 12px;
+    @include media(">=tablet") {
+      font-size: 20px;
     }
   }
 }
