@@ -21,7 +21,7 @@ export const projectsReact = [
     id: 3,
     title: "e-Commerce (work in progress)",
     img: eCommerce,
-    urlGitHub: "https://ecommerce-a69f9.web.app/",
+    urlGitHub: "https://eloquent-florentine-751567.netlify.app",
   },
 ];
 export const projectsGames = [
