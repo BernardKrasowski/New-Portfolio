@@ -9,13 +9,13 @@ export const projectsReact = [
     id: 1,
     title: "Weather app",
     img: wheaterApp,
-    urlGitHub: "https://github.com/BernardKrasowski/Weatherapp",
+    urlGitHub: "https://wheatherapp-cb4b5.web.app",
   },
   {
     id: 2,
     title: "Word Search",
     img: wordSearch,
-    urlGitHub: "https://github.com/BernardKrasowski/Word-Search",
+    urlGitHub: "https://wikipediaapp-7a7f8.web.app",
   },
   {
     id: 3,
@@ -29,7 +29,7 @@ export const projectsGames = [
     id: 3,
     title: "Saper",
     img: imgSaper,
-    urlGitHub: "https://github.com/BernardKrasowski/Saper-game",
+    urlGitHub: "https://saper-ddeae.web.app",
     icons: (
       <>
         <i class="fab fa-html5" style={{ color: "orange", fontSize: 40 }}></i>
@@ -48,7 +48,7 @@ export const projectsGames = [
     id: 4,
     title: "BlackJack",
     img: imgBlackJack,
-    urlGitHub: "https://github.com/BernardKrasowski/BlackJack",
+    urlGitHub: "https://blackjack-cc33c.web.app/",
     icons: (
       <>
         <i class="fab fa-html5" style={{ color: "orange", fontSize: 40 }}></i>
@@ -67,7 +67,7 @@ export const projectsGames = [
     id: 5,
     title: "Rock-Paper-Scissors",
     img: imgRockPaperScissor,
-    urlGitHub: "https://github.com/BernardKrasowski/Rock_paper_scissors",
+    urlGitHub: "https://rock-paper-scissors-7c898.web.app",
     icons: (
       <>
         <i class="fab fa-html5" style={{ color: "orange", fontSize: 40 }}></i>

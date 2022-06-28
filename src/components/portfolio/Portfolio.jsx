@@ -3,10 +3,13 @@ import PortfolioList from "../portfolioList/PortfolioList.jsx";
 import "./portfolio.scss";
 import ArrowButton from "../arrowButton/ArrowButton";
 import { projectsReact, projectsGames } from "../../data.jsx";
+import { useNavigate } from "react-router-dom";
+import { WindowSharp } from "@mui/icons-material";
 
 export default function Portfolio() {
   const [selected, setSelected] = useState("react");
   const [data, setData] = useState([]);
+
   const list = [
     {
       id: "react",
