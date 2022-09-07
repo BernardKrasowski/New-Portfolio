@@ -5,30 +5,107 @@ import wheaterApp from "./images/weatherapp/weatherapp.jpg";
 import wordSearch from "./images/wordSearch/wordSearch.jpg";
 import eCommerce from "./images/eCommerce/eCommerce.jpg";
 import petrolCon from "./images/petrolconsumption/petrolCon.png";
+import { FaReact } from "react-icons/fa";
+import { IoLogoFirebase } from "react-icons/io5";
 export const projectsReact = [
   {
     id: 1,
     title: "Weather app",
     img: wheaterApp,
     urlGitHub: "https://wheatherapp-cb4b5.web.app",
+    icons: (
+      <>
+        <FaReact style={{ color: "rgb(4,205,241)", fontSize: 40 }} />
+        <IoLogoFirebase style={{ color: "rgb(255,204,55)", fontSize: 40 }} />
+        <i
+          className="fab fa-html5"
+          style={{ color: "orange", fontSize: 40 }}
+        ></i>
+        <i
+          className="fab fa-css3"
+          style={{ color: "rgb(33,150,243)", fontSize: 40 }}
+        ></i>
+        <i
+          className="fab fa-js-square"
+          style={{ color: "rgb(254,215,2)", fontSize: 40 }}
+        ></i>
+      </>
+    ),
   },
   {
     id: 2,
     title: "Word Search",
     img: wordSearch,
     urlGitHub: "https://wikipediaapp-7a7f8.web.app",
+    icons: (
+      <>
+        <FaReact style={{ color: "rgb(4,205,241)", fontSize: 40 }} />
+        <IoLogoFirebase style={{ color: "rgb(255,204,55)", fontSize: 40 }} />
+
+        <i
+          className="fab fa-html5"
+          style={{ color: "orange", fontSize: 40 }}
+        ></i>
+        <i
+          className="fab fa-css3"
+          style={{ color: "rgb(33,150,243)", fontSize: 40 }}
+        ></i>
+        <i
+          className="fab fa-js-square"
+          style={{ color: "rgb(254,215,2)", fontSize: 40 }}
+        ></i>
+      </>
+    ),
   },
   {
     id: 3,
     title: "e-Commerce (work in progress)",
     img: eCommerce,
     urlGitHub: "https://eloquent-florentine-751567.netlify.app",
+    icons: (
+      <>
+        <FaReact style={{ color: "rgb(4,205,241)", fontSize: 40 }} />
+        <IoLogoFirebase style={{ color: "rgb(255,204,55)", fontSize: 40 }} />
+
+        <i
+          className="fab fa-html5"
+          style={{ color: "orange", fontSize: 40 }}
+        ></i>
+        <i
+          className="fab fa-css3"
+          style={{ color: "rgb(33,150,243)", fontSize: 40 }}
+        ></i>
+        <i
+          className="fab fa-js-square"
+          style={{ color: "rgb(254,215,2)", fontSize: 40 }}
+        ></i>
+      </>
+    ),
   },
   {
     id: 4,
     title: "Petrol Consumption",
     img: petrolCon,
     urlGitHub: "https://petrol-consumption.web.app/",
+    icons: (
+      <>
+        <FaReact style={{ color: "rgb(4,205,241)", fontSize: 40 }} />
+        <IoLogoFirebase style={{ color: "rgb(255,204,55)", fontSize: 40 }} />
+
+        <i
+          className="fab fa-html5"
+          style={{ color: "orange", fontSize: 40 }}
+        ></i>
+        <i
+          className="fab fa-css3"
+          style={{ color: "rgb(33,150,243)", fontSize: 40 }}
+        ></i>
+        <i
+          className="fab fa-js-square"
+          style={{ color: "rgb(254,215,2)", fontSize: 40 }}
+        ></i>
+      </>
+    ),
   },
 ];
 export const projectsGames = [
@@ -39,13 +116,16 @@ export const projectsGames = [
     urlGitHub: "https://saper-ddeae.web.app",
     icons: (
       <>
-        <i class="fab fa-html5" style={{ color: "orange", fontSize: 40 }}></i>
         <i
-          class="fab fa-css3"
+          className="fab fa-html5"
+          style={{ color: "orange", fontSize: 40 }}
+        ></i>
+        <i
+          className="fab fa-css3"
           style={{ color: "rgb(33,150,243)", fontSize: 40 }}
         ></i>
         <i
-          class="fab fa-js-square"
+          className="fab fa-js-square"
           style={{ color: "rgb(254,215,2)", fontSize: 40 }}
         ></i>
       </>
@@ -58,13 +138,16 @@ export const projectsGames = [
     urlGitHub: "https://blackjack-cc33c.web.app/",
     icons: (
       <>
-        <i class="fab fa-html5" style={{ color: "orange", fontSize: 40 }}></i>
         <i
-          class="fab fa-css3"
+          className="fab fa-html5"
+          style={{ color: "orange", fontSize: 40 }}
+        ></i>
+        <i
+          className="fab fa-css3"
           style={{ color: "rgb(33,150,243)", fontSize: 40 }}
         ></i>
         <i
-          class="fab fa-js-square"
+          className="fab fa-js-square"
           style={{ color: "rgb(254,215,2)", fontSize: 40 }}
         ></i>
       </>
@@ -77,13 +160,16 @@ export const projectsGames = [
     urlGitHub: "https://rock-paper-scissors-7c898.web.app",
     icons: (
       <>
-        <i class="fab fa-html5" style={{ color: "orange", fontSize: 40 }}></i>
         <i
-          class="fab fa-css3"
+          className="fab fa-html5"
+          style={{ color: "orange", fontSize: 40 }}
+        ></i>
+        <i
+          className="fab fa-css3"
           style={{ color: "rgb(33,150,243)", fontSize: 40 }}
         ></i>
         <i
-          class="fab fa-js-square"
+          className="fab fa-js-square"
           style={{ color: "rgb(254,215,2)", fontSize: 40 }}
         ></i>
       </>
