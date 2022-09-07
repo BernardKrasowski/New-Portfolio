@@ -61,7 +61,7 @@ export const projectsReact = [
     id: 3,
     title: "e-Commerce (work in progress)",
     img: eCommerce,
-    urlGitHub: "https://eloquent-florentine-751567.netlify.app",
+    urlGitHub: "https://ecommerce2-6b34f.web.app/",
     icons: (
       <>
         <FaReact style={{ color: "rgb(4,205,241)", fontSize: 40 }} />
