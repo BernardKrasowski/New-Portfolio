@@ -4,6 +4,7 @@ import imgRockPaperScissor from "./images/rockPaperScissors/img1.png";
 import wheaterApp from "./images/weatherapp/weatherapp.jpg";
 import wordSearch from "./images/wordSearch/wordSearch.jpg";
 import eCommerce from "./images/eCommerce/eCommerce.jpg";
+import petrolCon from "./images/petrolconsumption/petrolCon.png";
 export const projectsReact = [
   {
     id: 1,
@@ -22,6 +23,12 @@ export const projectsReact = [
     title: "e-Commerce (work in progress)",
     img: eCommerce,
     urlGitHub: "https://eloquent-florentine-751567.netlify.app",
+  },
+  {
+    id: 4,
+    title: "Petrol Consumption",
+    img: petrolCon,
+    urlGitHub: "https://petrol-consumption.web.app/",
   },
 ];
 export const projectsGames = [
